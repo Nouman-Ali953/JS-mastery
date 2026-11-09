@@ -35,7 +35,8 @@ marks = 35; // reassigning the value of marks
 console.log("Updated Marks is", marks);
 
 
-// const is the block scoped variable - it means it can only be accessed within the block it is defined in. It is recommended to use const for variable declarations when the value of the variable should not be changed.
+// const is the block scoped variable - it means it can only be accessed within the block it is defined in.
+//  It is recommended to use const for variable declarations when the value of the variable should not be changed.
 
 if (true) {
   const country = "USA";

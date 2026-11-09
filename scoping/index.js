@@ -1,3 +1,5 @@
+
+"use strict"
 console.log("hello this is the scoping practicing file in JS..");
 
 /////////////////////////////////////////
@@ -70,3 +72,61 @@ function a() {
 a();
 console.log("\n");
 
+
+
+
+/////////////////////////////////////////
+///// Variable shadowing
+/////////////////////////////////////////
+console.log('\n');
+
+let message = "Hello from Global"; // Outer variable
+
+function sayHello() {
+  let message = "Hello from Function"; // Shadows the outer variable
+  console.log(message); // "Hello from Function"
+}
+
+sayHello();
+console.log(message); // "Hello from Global" (outer variable is unaffected outside)
+console.log('\n');
+
+
+
+
+
+/////////////////////////////////////////
+///// Hoisting in jS
+/////////////////////////////////////////
+console.log('\n');
+// Hoisting is JavaScript’s default behavior of moving variable and function declarations
+// to the top of their respective scopes before code execution begins.
+
+// var declarations: Hoisted to the top and initialized with a value of undefined.
+// 
+// let and const declarations: Hoisted to the top, but not initialized (they sit in the TDZ).
+// 
+// Function declarations: Fully hoisted (both declaration and body), meaning you can call them before they appear in the code.
+
+console.log(myVar)
+var myVar = "Hello and hoisted and can be access before declaration with value undefined"
+
+
+// console.log(letValue); //ReferenceError: Cannot access 'letValue' before initialization
+
+let letValue = "Hosited but exists in TDZ"
+
+console.log('\n');
+
+
+
+/////////////////////////////////////////
+///// Temporal Dead Zone (TDZ)
+/////////////////////////////////////////
+console.log('\n');
+// Temporal Dead Zone (TDZ)	The period before let/const is initialized	Accessing the variable in this zone throws a ReferenceError.
+console.log('\n');
+
+
+const x = 10;
+console.log(x)
