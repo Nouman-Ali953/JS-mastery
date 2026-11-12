@@ -8,7 +8,8 @@
 // 4. Undefined: Represents a variable that has been declared but has not been assigned a value. Example: let x; console.log(x); // undefined
 // 5. Null: Represents the intentional absence of any object value. Example: let y = null; console.log(y); // null
 
-// primitives are immutable, meaning their values cannot be changed once they are created. When you assign a primitive value to a variable, the variable holds the actual value itself.
+// primitives are immutable, meaning their values cannot be changed once they are created. When you assign a primitive value to a variable,
+//  the variable holds the actual value itself.
 
 let num = 42; // Number
 let secondNum = num;
@@ -29,7 +30,8 @@ console.log(name2); // "Bob"
 // 2. Array: Represents an ordered list of values. Example: [1, 2, 3, 4, 5]
 // 3. Function: Represents a reusable block of code that can be called with arguments. Example: function greet() { console.log("Hello!"); }
 
-// non-primitives are mutable, meaning their values can be changed after they are created. When you assign a non-primitive value to a variable, the variable holds a reference to the actual value in memory.
+// non-primitives are mutable, meaning their values can be changed after they are created. 
+// When you assign a non-primitive value to a variable, the variable holds a reference to the actual value in memory.
 
 let person = { name: "Alice", age: 30 };
 let anotherPerson = person; // anotherPerson holds a reference to the same object in memory
@@ -112,10 +114,32 @@ console.log(typeof str1); // Output: string
 
 
 // Type Coercion (Implicit)
-// When JavaScript automatically converts data types behind the scenes to complete an operation. This can sometimes lead to unexpected behavior if you aren't careful!
+// When JavaScript automatically converts data types behind the scenes to complete an operation.
+//  This can sometimes lead to unexpected behavior if you aren't careful!
 
 console.log(5 + "5"); // Output: "55" (number 5 is coerced to string "5")
 
 console.log("5" - 2) // Output: 3 (string "5" is coerced to number 5)
 console.log("5" * 2) // Output: 10 (string "5" is coerced to number 5)
 console.log("5" / 2) // Output: 2.5 (string "5" is coerced to number 5)
+
+
+
+
+
+// instanceof operator
+// it checks whether an object is an instance of a specific class or constructor function. 
+// It returns true if the object is an instance of the specified class, and false otherwise.
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+const person1 = new Person("Alice", 30);
+console.log(person1 instanceof Person); // Output: true
+const person2 = { name: "Bob", age: 25 };
+console.log(person2 instanceof Person); // Output: false
+
